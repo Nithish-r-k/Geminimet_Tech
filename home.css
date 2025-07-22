@@ -1,0 +1,156 @@
+/* mini Project Day 10 */ 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ✅ Navigation Bar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 12px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #00bcd4;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+/* ✅ Hero Section */
+#hero {
+  background: linear-gradient(to right, #007acc, #00bcd4);
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+.cta-button {
+  margin-top: 20px;
+  display: inline-block;
+  background-color: #ff5722;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #e64a19;
+}
+
+/* ✅ Features Section */
+#features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  justify-content: center;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 250px;
+  text-align: center;
+}
+
+/* ✅ Feedback Section */
+#feedback {
+  background-color: #fafafa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.feedback {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* ✅ Footer Section */
+footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-content .social a {
+  color: white;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.footer-content .social a:hover {
+  color: #00bcd4;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  #features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 80%;
+  }
+
+  .feedback {
+    width: 90%;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar li a {
+    font-size: 16px;
+  }
+}
