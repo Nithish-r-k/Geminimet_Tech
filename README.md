@@ -342,6 +342,9 @@ Performance optimized
 
 <img width="1920" height="1080" alt="Screenshot (98)" src="https://github.com/user-attachments/assets/6eb05d00-ed12-41f3-bb50-4c1d93dea70f" />
 
+**📢 License**
+This project is for educational purposes. No license required.
+
 
 
 
