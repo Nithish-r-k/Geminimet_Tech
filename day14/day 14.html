@@ -1,0 +1,110 @@
+<!--  Geminimet Tech Solutions - Day 14 Responsive Best Practices -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geminimet Tech Solutions | Responsive Web Design</title>
+  <link rel="stylesheet" href="Day 14.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Geminimet Tech Solutions</div>
+    <nav class="menu">
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger">&#9776;</div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1>🌐 Responsive Web Design Best Practices</h1>
+      <p>Learn how we craft intelligent, responsive digital experiences across every screen size and device.</p>
+    </section>
+
+    <section id="products" class="grid-section">
+      <h2>🚀 Our Products</h2>
+      <div class="product-grid">
+        <article class="product-card">
+          <h3>🔄 SyncNest</h3>
+          <p>SyncNest ensures seamless file synchronization and mobile collaboration, allowing remote teams to stay connected effortlessly.</p>
+        </article>
+        <article class="product-card">
+          <h3>📊 PulseTrack</h3>
+          <p>PulseTrack monitors system performance in real time, making it easy to analyze and optimize operations on the go.</p>
+        </article>
+        <article class="product-card">
+          <h3>🧠 InsightLoop</h3>
+          <p>InsightLoop delivers predictive insights and smart analytics to help businesses make data-backed decisions efficiently.</p>
+        </article>
+        <article class="product-card">
+          <h3>✅ TaskAura</h3>
+          <p>TaskAura automates workflow prioritization, boosting team productivity with intelligent task tracking and scheduling.</p>
+        </article>
+        <article class="product-card">
+          <h3>💾 DataMorph</h3>
+          <p>DataMorph simplifies complex data pipelines, transforming raw information into powerful intelligence for scaling solutions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="form-section">
+      <h2>📬 Let's Connect</h2>
+      <p>Reach out to explore how Geminimet Tech Solutions can elevate your digital vision.</p>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required pattern="[A-Za-z\s]+" title="Please enter letters only." />
+        <input type="email" placeholder="Your Email" required />
+        <input type="tel" id="phone" placeholder="Phone Number" required pattern="[0-9+\-\s]+" title="Only numbers, +, - and spaces allowed." />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="acknowledgment" class="thank-you"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Geminimet Tech Solutions. <span>Crafted with intelligence and innovation.</span></p>
+  </footer>
+
+  <script>
+    // Smart validation + acknowledgment
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name");
+      const phone = document.getElementById("phone");
+      const acknowledgment = document.getElementById("acknowledgment");
+
+      const nameValid = /^[A-Za-z\s]+$/.test(name.value.trim());
+      const phoneValid = /^[0-9+\-\s]+$/.test(phone.value.trim());
+
+      if (!nameValid) {
+        acknowledgment.textContent = "❌ Please enter a valid name using only letters.";
+        acknowledgment.style.color = "crimson";
+        return;
+      }
+
+      if (!phoneValid) {
+        acknowledgment.textContent = "❌ Please enter a valid phone number using only digits, +, - or spaces.";
+        acknowledgment.style.color = "crimson";
+        return;
+      }
+
+      acknowledgment.textContent = "🎉 Thank you for reaching out! We’ll get back to you shortly with intelligent solutions.";
+      acknowledgment.style.color = "#0077b6";
+      acknowledgment.style.fontWeight = "600";
+
+      // Optional: reset form
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

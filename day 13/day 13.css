@@ -1,0 +1,195 @@
+/* Day 13 Media Queries  CSS for Geminimet Tech Product Landing Page with Grid Layout */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fefefe;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* NAVIGATION */
+.navbar {
+  background: linear-gradient(to right, #023047, #219ebc);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 40px;
+  padding: 0;
+}
+
+.navbar a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffb703;
+}
+
+/* SECTION */
+.product-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #e0f2fe, #ffffff);
+}
+
+.product-section h1 {
+  font-size: 2.4rem;
+  color: #023047;
+  margin-bottom: 12px;
+}
+
+.product-section p {
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 750px;
+  margin: 0 auto 40px;
+}
+
+/* GRID */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 0 10px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+  background: #ffffff;
+  color: #333;
+  padding: 24px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+  border-left: 6px solid transparent;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  background: #f0f0f0;
+}
+
+.product-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #0d1b2a;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* FOOTER */
+footer {
+  background-color: #023047;
+  color: #fff;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 50px;
+  font-size: 15px;
+  border-top: 4px solid #ffb703;
+}
+
+/* ---------------------- */
+/* 🎯 Responsive Breakpoints Using Products */
+/* ---------------------- */
+
+/* 🔄 SYNCNEST - SMALL SCREENS */
+@media (max-width: 480px) {
+  .product-section {
+    background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+  }
+
+  .product-card {
+    background: #caf0f8;
+    border-left: 6px solid #0077b6;
+  }
+
+  .product-card h2 {
+    color: #03045e;
+  }
+}
+
+/* 📊 PULSETRACK - TABLETS */
+@media (min-width: 481px) and (max-width: 767px) {
+  .product-section {
+    background: linear-gradient(to bottom, #fff3e0, #ffffff);
+  }
+
+  .product-card {
+    background: #ffdd99;
+    border-left: 6px solid #ff9800;
+  }
+
+  .product-card h2 {
+    color: #bf360c;
+  }
+}
+
+/* 🧠 INSIGHTLOOP - MID DESKTOP */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .product-section {
+    background: linear-gradient(to bottom, #f1faee, #ffffff);
+  }
+
+  .product-card {
+    background: #d0f4de;
+    border-left: 6px solid #06d6a0;
+  }
+
+  .product-card h2 {
+    color: #118ab2;
+  }
+}
+
+/* ✅ TASKAURA - LAPTOP / LARGE DESKTOP */
+@media (min-width: 1024px) {
+  .product-section {
+    background: linear-gradient(to bottom, #e6f4ea, #ffffff);
+  }
+
+  .product-card {
+    background: #b7e4c7;
+    border-left: 6px solid #2d6a4f;
+  }
+
+  .product-card h2 {
+    color: #081c15;
+  }
+}
+
+/* 💾 DATAMORPH - RETINA / HIGH DPI */
+@media (min-resolution: 192dpi) {
+  .product-card {
+    font-weight: 500;
+    border-width: 8px;
+  }
+
+  .product-section h1 {
+    font-size: 2.6rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  }
+}

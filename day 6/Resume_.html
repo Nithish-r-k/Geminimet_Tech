@@ -1,0 +1,134 @@
+<!-- Day 6 CSS Practice - Resume with Inline, Internal, and External CSS + Selectors -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nithish Ravichandran - Resume</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #main-title {
+      font-size: 2.5em;
+      margin-bottom: 0;
+    }
+
+    #subtitle {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    nav a.nav-link {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #3498db;
+    }
+
+    section {
+      background-color: #fff;
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 1em;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      #main-title {
+        font-size: 2em;
+      }
+      section h2 {
+        font-size: 1.5em;
+      }
+      ul {
+        padding-left: 15px;
+      }
+    }
+  </style>
+</head>
+<body style="background-color: #f4f4f9; padding: 20px;">
+  <header>
+    <h1 id="main-title">Nithish Ravichandran</h1>
+    <p id="subtitle">Web Developer | nithish10personal@gmail.com</p>
+  </header>
+
+  <nav>
+    <a href="#profile" class="nav-link">Profile</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#education" class="nav-link">Education</a>
+    <a href="#skills" class="nav-link">Skills</a>
+  </nav>
+
+  <main>
+    <section id="profile">
+      <h2>Profile</h2>
+      <p>A passionate web developer with experience in HTML, CSS, and JavaScript. I enjoy building accessible, responsive websites and learning new technologies.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Work Experience</h2>
+      <ul>
+        <li>Junior Web Developer at Geminimet Technologies (2025)</li>
+        <li>Intern at AICL Technologies. (2024)</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>Bachelor of Technology in Information Technology, Anna University (2025)</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>React, Node.js, Python</li>
+        <li>Responsive Design</li>
+        <li>Linked In & GitHub</li>
+        <li>Communication & Teamwork</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer style="background-color: #ddd; padding: 10px;">
+    <p>Contact: nithish10personal@gmail.com</p>
+    <p>&copy; 2025 Nithish Ravichandran</p>
+  </footer>
+</body>
+</html>

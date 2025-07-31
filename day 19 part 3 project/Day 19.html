@@ -1,0 +1,120 @@
+<!-- Day 19 portfolio -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nithish Portfolio</title>
+  <link rel="stylesheet" href="Day 19.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const messageBox = document.getElementById('acknowledgement');
+      messageBox.innerHTML = `✅ Thank you, <strong>${name}</strong>! Your message has been sent successfully. I'll get back to you shortly.`;
+      event.target.reset();
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h1>I'm Nithish R</h1>
+      <p>A passionate full-stack web developer with hands-on experience in building scalable applications and automation tools. My expertise includes HTML, CSS, JavaScript, Python, and various web frameworks. I've developed AI-powered tools, IoT-based robotic systems, and dynamic e-commerce platforms. I focus on turning innovative ideas into functional, user-centric solutions that deliver real value.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I specialize in full-stack development, blending front-end aesthetics with robust back-end logic. From designing test automation tools using GPT models to developing dynamic websites and embedded systems, I love working across technologies. My internship roles at Sutherland and AICL allowed me to explore customer-oriented tech and practical software engineering. I'm always eager to learn, build, and improve.</p>
+    </section>
+
+    <section id="portfolio">
+      <h2>My Projects</h2>
+      <div class="project-gallery">
+        <div class="project">
+          <img src="project1.jpg" alt="Auto Test Case Generator">
+          <h3>Auto Test Case Generator</h3>
+          <p>AI-powered tool using Streamlit and GPT-3.5 to generate automated test cases for scalable applications.</p>
+        </div>
+        <div class="project">
+          <img src="project2.jpg" alt="Night Patrol Vision Robot">
+          <h3>Night Patrol Vision Robot</h3>
+          <p>ESP32-CAM and ultrasonic sensor-based robot for night security, especially tailored for human safety.</p>
+        </div>
+        <div class="project">
+          <img src="project3.jpg" alt="E-commerce Website">
+          <h3>NS2 Midgets</h3>
+          <p>Miniature e-commerce site built on WordPress showcasing unique collectibles and intuitive layout.</p>
+        </div>
+      </div>
+
+      <h2>Internship Experience</h2>
+      <div class="project-gallery">
+
+      <div class="project">
+      <h3>AICL Technologies</h3>
+      <p>Web Developer: Designed innovative and dynamic web pages using modern frontend technologies like Python, HTML, CSS, and JavaScript.</p>
+      <p><em>Duration:</em> Mar 2023 – Apr 2023</p>
+      </div>
+
+      <div class="project">
+      <h3>Sutherland Global Services</h3>
+      <p>Customer Sales Executive: Handled technical support and enhanced Salesforce platforms using tools such as RIO, OPUS, CRM, Genesys Cloud, and Python automation.</p>
+      <p><em>Duration:</em> Aug 2024 – Oct 2024</p>
+      </div>
+
+      <div class="project">
+      <h3>VCodez</h3>
+      <p>Machine Learning Engineer: Worked on machine learning models, performed data preprocessing, and built AI-driven solutions using Python, TensorFlow, and PyTorch.</p>
+      <p><em>Duration:</em> Jul 2025 – Sep 2025</p>
+      </div>
+ 
+        
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="#" method="post" onsubmit="handleSubmit(event)">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" pattern="[A-Za-z\s]{1,}" title="Please enter a valid name" required aria-label="Enter your full name">
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required aria-label="Enter your email">
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" required aria-label="Enter your message" placeholder="Type your message here..."></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <div id="acknowledgement" style="margin-top: 20px; font-weight: bold; text-align: center; color: green;"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nithish R. All rights reserved.</p>
+    <div>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:nithish@example.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+</body>
+
+</html>

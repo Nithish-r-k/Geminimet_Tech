@@ -1,0 +1,225 @@
+/* Day 18  portfolio*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap');
+
+:root {
+  --bg: #fdfaf6;
+  --header-bg: #2e2e2e;
+  --footer-bg: #2e2e2e;
+  --section-light: #faf3dd;
+  --section-highlight: #ffeee2;
+  --primary: #ff6b6b;
+  --secondary: #fcbf49;
+  --hover: #ff944d;
+  --heading: #1f1f1f;
+  --text-body: #4b4b4b;
+  --text-muted: #606060;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-body);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  padding: 0 15px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, var(--header-bg), #1f1f1f);
+  padding: 25px 0;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--secondary);
+}
+
+/* Hero */
+#home {
+  background: linear-gradient(to right, #fff8f2, #fef0e3);
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin: 30px 0;
+  box-shadow: var(--shadow);
+}
+
+#home h1 {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+#home p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+/* Sections */
+section {
+  background-color: var(--section-light);
+  margin: 40px 0;
+  padding: 50px 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+section:nth-of-type(even) {
+  background-color: var(--section-highlight);
+}
+
+/* Headings */
+h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--heading);
+  margin-bottom: 20px;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  color: var(--text-body);
+}
+
+/* Portfolio Gallery */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.project {
+  background-color: #fffdf8;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--section-highlight);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+button.cta {
+  background: var(--primary);
+  border: none;
+  padding: 12px 24px;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.3s;
+}
+
+button.cta:hover {
+  background: var(--hover);
+  transform: scale(1.05);
+}
+
+/* Contact */
+#contact a {
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  color: var(--hover);
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-bg);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--secondary);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  #home h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #home h1 {
+    font-size: 1.8rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+}
